@@ -1,0 +1,10 @@
+<h2> Plants Found in <%= "#{@garden.name}" %></h2>
+<br>
+<% @plants.each do |plant| %>
+  <h4><p> Name: <%= plant.name %></p></h4>
+  <p> Type: <%= plant.plant_type %></p>
+  <p> Water Needs: <%= plant.water %></p>
+  <p> Light Needs: <%= plant.light %></p>
+  <p> Poisonous?: <%= plant.poisonous %></p>
+  <p> Growing Zone: <%= plant.zone %></p>
+  <% end %>
