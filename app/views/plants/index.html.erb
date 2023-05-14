@@ -1,0 +1,10 @@
+<h2>Plants Index Page</h2>
+
+<% @plants.each do |plant| %>
+<h3> <p><%= plant.name %></p></h3>
+<p> Type: <%= plant.plant_type %></p>
+<p> Water Needs: <%= plant.water %></p>
+<p> Light Needs: <%= plant.light %></p>
+<p> Poisonous?: <%= plant.poisonous %></p>
+<p> Growing Zone: <%= plant.zone %></p>
+  <% end %>
