@@ -10,11 +10,29 @@ RSpec.describe "/gardens", type: :feature do
 
     it "displays all the names of all the gardes" do
       visit "/gardens"
-      save_and_open_page
+      # save_and_open_page
 
       expect(page).to have_content(garden_1.name)
       expect(page).to have_content(garden_2.name)
       expect(page).to have_content(garden_3.name)
     end
+  
+    # User Story 6
+
+    it "displays all the names of the gardens in descending order, and when they were created" do
+      visit "/gardens"
+      save_and_open_page
+      
+      expect(garden_2.name).to appear_before(garden_1.name)
+      expect(garden_3.name).to appear_before(garden_2.name)
+      expect(page).to have_content(garden_1.created_at)
+    end
   end
+
+
+
+
+
+
+
 end
