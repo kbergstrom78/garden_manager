@@ -52,23 +52,25 @@ When I visit '/child_table_name/:id'
 Then I see the child with that id including the child's attributes
 (data from each column that is on the child table) -->
 
-[ ] done
+<!-- [ X ] done
 
 User Story 5, Parent Children Index 
 
 As a visitor
 When I visit '/parents/:parent_id/child_table_name'
 Then I see each Child that is associated with that Parent with each Child's attributes
-(data from each column that is on the child table)
-ActiveRecord
-[ ] done
+(data from each column that is on the child table) -->
+
+<!-- ActiveRecord
+[ X ] done
 
 User Story 6, Parent Index sorted by Most Recently Created 
 
 As a visitor
 When I visit the parent index,
 I see that records are ordered by most recently created first
-And next to each of the records I see when it was created
+And next to each of the records I see when it was created -->
+
 [ ] done
 
 User Story 7, Parent Child Count
