@@ -6,3 +6,5 @@
 <p>Plot Number: <%= @garden.plot%></p>
 <br>
 <p>Number of Plants: <%=@garden.count_of_plants%></p>
+<br>
+<p><%= link_to "Plants in this Garden", "/gardens/#{@garden.id}/plants" %></p>

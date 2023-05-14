@@ -46,6 +46,14 @@ RSpec.describe '/gardens/:id', type: :feature do
     expect(page).to have_content("Number of Plants: #{garden_1.plants.size}")
   end
 
+  # User Story 10
 
+  it "displays a link to take me to the gardens-plants page" do
+    visit "/gardens/#{garden_1.id}"
+    save_and_open_page
 
+    expect(page).to have_link("Plants in this Garden")
+    click_link("Plants in this Garden")
+    expect(page.current_path).to eq "/gardens/#{garden_1.id}/plants"
+  end 
 end
