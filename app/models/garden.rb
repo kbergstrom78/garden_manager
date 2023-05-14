@@ -5,4 +5,7 @@ class Garden < ApplicationRecord
     order(created_at: :desc).to_a
   end
 
+  def count_of_plants
+    plants.size
+  end
 end
