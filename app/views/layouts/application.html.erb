@@ -8,9 +8,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-  </head>
+    </head>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+    <body>
+    <a href="/plants">All Plants</a>
+    <br>
+    <a href="/gardens">All Gardens</a>
+        <%= yield %>
+      </body>
+    </html>
