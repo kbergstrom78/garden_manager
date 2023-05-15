@@ -95,13 +95,13 @@ As a visitor
 When I visit any page on the site
 Then I see a link at the top of the page that takes me to the Parent Index -->
 
-[ ] done
+<!-- [ X ] done
 
 User Story 10, Parent Child Index Link
 
 As a visitor
 When I visit a parent show page ('/parents/:id')
-Then I see a link to take me to that parent's `child_table_name` page ('/parents/:id/child_table_name')
+Then I see a link to take me to that parent's `child_table_name` page ('/parents/:id/child_table_name') -->
 
 Iteration 2
 CRUD

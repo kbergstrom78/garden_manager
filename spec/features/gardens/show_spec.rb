@@ -43,6 +43,7 @@ RSpec.describe '/gardens/:id', type: :feature do
 
   it "displays a count of the number of plants associated with the garden" do
     visit "/gardens/#{garden_1.id}"
+    save_and_open_page
     expect(page).to have_content("Number of Plants: #{garden_1.plants.size}")
   end
 
