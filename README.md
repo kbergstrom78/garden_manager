@@ -103,9 +103,9 @@ As a visitor
 When I visit a parent show page ('/parents/:id')
 Then I see a link to take me to that parent's `child_table_name` page ('/parents/:id/child_table_name') -->
 
-Iteration 2
-CRUD
-[ ] done
+<!-- Iteration 2
+CRUD -->
+<!-- *[ X ] done
 
 User Story 11, Parent Creation 
 
@@ -118,7 +118,8 @@ When I fill out the form with a new parent's attributes:
 And I click the button "Create Parent" to submit the form
 Then a `POST` request is sent to the '/parents' route,
 a new parent record is created,
-and I am redirected to the Parent Index page where I see the new Parent displayed.
+and I am redirected to the Parent Index page where I see the new Parent displayed.* -->
+
 [ ] done
 
 User Story 12, Parent Update 

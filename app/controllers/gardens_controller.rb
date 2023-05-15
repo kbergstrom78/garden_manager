@@ -15,6 +15,17 @@ class GardensController < ApplicationController
     redirect_to "/gardens"
   end
 
+  def edit
+    @garden = Garden.find(params[:id])
+  end
+  
+  def update
+    garden = Garden.find(params[:id])
+    garden.update(garden_params)
+    garden.save
+    redirect_to "/gardens/#{garden.id}"
+  end
+
   private
   
   def garden_params
