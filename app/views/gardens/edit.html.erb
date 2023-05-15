@@ -1,0 +1,17 @@
+<%= form_with url: "/gardens/#{@garden.id}", method: :patch, local: true do |form|  %>
+  <h3><%= form.label :name %></h3>
+  <p><%= form.text_field :name %></p>
+
+  <h3><%= form.label :location %></h3>
+  <p><%= form.text_field :location %></p>
+
+    <%= form.radio_button :plantable, true %></p>
+    <%= form.label :true, "Ready for planting" %></p>
+    <%= form.radio_button :plantable, false %></p>
+    <%= form.label :false, "Not ready to plant" %></p>
+
+  <h3><%= form.label :plot %></h3>
+  <p><%= form.text_field :plot %></p>
+  <br>
+  <%= form.submit "Update Garden Info" %>
+<% end %>
