@@ -28,11 +28,4 @@ RSpec.describe "/gardens", type: :feature do
       expect(page).to have_content(garden_1.created_at)
     end
   end
-
-
-
-
-
-
-
 end
