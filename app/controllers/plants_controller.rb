@@ -1,7 +1,7 @@
 class PlantsController < ApplicationController
 
   def index
-    @plants = Plant.all
+    @plants = Plant.where(poisonous: true)
   end
 
   def show
