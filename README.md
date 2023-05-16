@@ -1,6 +1,5 @@
 # README
-
-Table -> Garden
+![image](https://github.com/kbergstrom78/garden_manager/assets/124642113/bb1f746b-3349-43ac-b1a1-1b68264f56f7)Table -> Garden
 - name: string
 - location: string
 - plantable: boolean
