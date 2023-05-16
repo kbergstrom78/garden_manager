@@ -228,11 +228,18 @@
           1,
           1,
           1,
-          1,
-          null,
           null,
           1,
           1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -253,7 +260,7 @@
           null,
           null,
           1,
-          7,
+          0,
           null,
           null
         ]
@@ -272,30 +279,19 @@
           null
         ]
       },
-      "/Users/kimbergstrom/Turing/2mod/projects/garden_manager/garden_manager/app/controllers/gardens_controller.rb": {
+      "/Users/kimbergstrom/Turing/2mod/projects/garden_manager/garden_manager/app/controllers/gardens/plants_controller.rb": {
         "lines": [
           1,
           1,
-          0,
-          null,
-          null,
-          1,
-          7,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
+          2,
+          2,
           null,
           null,
           1,
           1,
-          null,
-          null,
           1,
+          null,
+          null,
           1,
           1,
           1,
@@ -305,13 +301,7 @@
           1,
           null,
           1,
-          null,
-          null,
           1,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ]
@@ -321,18 +311,8 @@
           1,
           null
         ]
-      },
-      "/Users/kimbergstrom/Turing/2mod/projects/garden_manager/garden_manager/app/controllers/gardens/plants_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1684192552
+    "timestamp": 1684243059
   }
 }

@@ -7,12 +7,19 @@ Rails.application.routes.draw do
   get '/gardens/new', to: 'gardens#new'
   post '/gardens', to: "gardens#create"
   get '/gardens/:id', to: 'gardens#show'
-  get '/plants', to: 'plants#index'
-  get '/plants/:id', to: 'plants#show'
-  get '/gardens/:garden_id/plants', to: 'gardens/plants#index'
-
-  
   get '/gardens/:id/edit', to: "gardens#edit"
   patch '/gardens/:id', to: 'gardens#update'
+  
+  get '/plants', to: 'plants#index'
+  get '/plants/:id', to: 'plants#show'
 
+  get '/gardens/:garden_id/plants', to: 'gardens/plants#index'
+  get '/gardens/:garden_id/plants/new', to: 'gardens/plants#new'
+  post '/gardens/:garden_id/plants', to: 'gardens/plants#create'
+
+
+  
+ 
 end
+
+
