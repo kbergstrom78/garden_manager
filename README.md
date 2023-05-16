@@ -202,9 +202,9 @@ Next to every child, I see a link to edit that child's info
 When I click the link
 I should be taken to that `child_table_name` edit page where I can update its information just like in User Story 14 -->
 
-Iteration 3
+<!-- Iteration 3
 CRUD
-[ ] done
+[ X ] done
 
 User Story 19, Parent Delete 
 
@@ -214,7 +214,8 @@ Then I see a link to delete the parent
 When I click the link "Delete Parent"
 Then a 'DELETE' request is sent to '/parents/:id',
 the parent is deleted, and all child records are deleted
-and I am redirected to the parent index page where I no longer see this parent
+and I am redirected to the parent index page where I no longer see this parent -->
+
 [ ] done
 
 User Story 20, Child Delete 

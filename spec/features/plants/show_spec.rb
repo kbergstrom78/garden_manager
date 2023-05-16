@@ -3,8 +3,16 @@ require 'rails_helper'
 
 RSpec.describe "/plants/:id", type: :feature do
   let!(:garden_1) { Garden.create!(name:"Kew Garden", location: "London", plantable: true, plot: 65)  }
+  let!(:garden_2) { Garden.create!(name:"2nd Grade Garden", location: "Mountain Elementary", plantable: true, plot: 3)  }
+  let!(:garden_3) { Garden.create!(name:"Los Alamos Community Garden", location: "North Mesa", plantable: false, plot: 12)  }
+  
+  
   let!(:plant_1) { garden_1.plants.create!(name: "geranium", plant_type: "annual", light: "partial sun", water: "moderate", poisonous: false, zone: "5" )}
   let!(:plant_2) { garden_1.plants.create!(name: "yarrow", plant_type: "perennial", light: "full sun", water: "low", poisonous: false, zone: "7" )}
+  let!(:plant_3) { garden_1.plants.create!(name: "foxglove1", plant_type: "biannual", light: "shade", water: "high", poisonous: true, zone: "6" )}
+  let!(:plant_4) { garden_2.plants.create!(name: "foxglove2", plant_type: "biannual", light: "shade", water: "high", poisonous: true, zone: "6" )}
+  let!(:plant_5) { garden_2.plants.create!(name: "foxglove3", plant_type: "biannual", light: "shade", water: "high", poisonous: true, zone: "6" )}
+  let!(:plant_6) { garden_2.plants.create!(name: "foxglove4", plant_type: "biannual", light: "shade", water: "high", poisonous: true, zone: "6" )}
 
   it 'displays the specific plant with its attributes' do
     visit "/plants/#{plant_1.id}"
@@ -48,5 +56,16 @@ RSpec.describe "/plants/:id", type: :feature do
     expect(current_path).to eq "/plants/#{plant_1.id}"
     expect(page).to have_content("herb")
   end
+
+      # User Story 20, Child Delete 
+    it 'displays a link to delete a plant record' do
+      visit "/plants/#{plant_3.id}"
+      save_and_open_page
+      click_button "Delete #{plant_3.name}"
+      
+      expect(current_path).to eq("/plants")
+      expect(page).to_not have_content(plant_3.name)
+    end
+
 
 end

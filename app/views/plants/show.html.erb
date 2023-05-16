@@ -7,4 +7,4 @@
 <p> Growing Zone: <%= @plant.zone %></p>
 
 <p><%= link_to "Update Plant", "/plants/#{@plant.id}/edit" %></p>
-
+<%= button_to "Delete #{@plant.name}", "/plants/#{@plant.id}", method: :delete %>
