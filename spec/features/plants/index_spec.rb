@@ -39,10 +39,6 @@ RSpec.describe "/plants", type: :feature do
   
   
       # User Story 15, 
-
-      # As a visitor
-      # When I visit the child index
-      # Then I only see records where the boolean column is `true`
   
       it "only displays records where poisonous = true" do
         visit '/plants'
@@ -54,8 +50,7 @@ RSpec.describe "/plants", type: :feature do
         expect(page).to have_content(plant_3.light)
         expect(page).to have_content(plant_3.poisonous)
         expect(page).to have_content(plant_3.zone)
-
-
       end
-  end
+  
+
 end

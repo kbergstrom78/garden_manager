@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-16T08:13:49-06:00">2023-05-16T08:13:49-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-16T08:48:48-06:00">2023-05-16T08:48:48-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="yellow">
-  89.16%
+  88.51%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.89
+         0.95
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>83</b> relevant lines,
-    <span class="green"><b>74</b> lines covered</span> and
-    <span class="red"><b>9</b> lines missed. </span>
+    <b>87</b> relevant lines,
+    <span class="green"><b>77</b> lines covered</span> and
+    <span class="red"><b>10</b> lines missed. </span>
     (<span class="yellow">
-  89.16%
+  88.51%
 </span>
 )
   </div>
@@ -82,13 +82,13 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#0dd9c75eacbc94c28e5a4d8e902c7906c8a8614c" class="src_link" title="app/controllers/plants_controller.rb">app/controllers/plants_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">53.33 %</td>
+            <td class="strong t-file__name"><a href="#be5ae627b0016faaf9a3836fada8d40bf027393c" class="src_link" title="app/controllers/gardens/plants_controller.rb">app/controllers/gardens/plants_controller.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">62.50 %</td>
             <td class="cell--number">27</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">0.53</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -116,12 +116,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d0a21ca3f7932a2c101f465f31aa41ab3ecb8def" class="src_link" title="app/models/garden.rb">app/models/garden.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">66.67 %</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">6</td>
+            <td class="red strong cell--number t-file__coverage">55.56 %</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">5</td>
             <td class="cell--number">4</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">0.67</td>
+            <td class="cell--number">0.56</td>
             
           </tr>
         
@@ -316,12 +316,12 @@
 </div>
 
       
-        <div class="source_table" id="0dd9c75eacbc94c28e5a4d8e902c7906c8a8614c">
+        <div class="source_table" id="be5ae627b0016faaf9a3836fada8d40bf027393c">
   <div class="header">
-    <h3>app/controllers/plants_controller.rb</h3>
+    <h3>app/controllers/gardens/plants_controller.rb</h3>
     <h4>
       <span class="red">
-  53.33%
+  62.5%
 </span>
 
       lines covered
@@ -330,9 +330,9 @@
     
 
     <div class="t-line-summary">
-      <b>15</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <b>16</b> relevant lines.
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
 
     
@@ -349,23 +349,12 @@
 
             
 
-            <code class="ruby">class PlantsController &lt; ApplicationController</code>
+            <code class="ruby">class Gardens::PlantsController &lt; ApplicationController</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
+          <li class="covered" data-hits="1" data-linenumber="2">
             <span class="hits">1</span>
             
 
@@ -376,13 +365,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="3">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">    @plants = Plant.where(poisonous: true)</code>
+            <code class="ruby">    @garden = Garden.find(params[:garden_id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="4">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    @plants = @garden.plants</code>
           </li>
         </div>
       
@@ -393,18 +393,18 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="6">
+            <span class="hits">3</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    if params[:sort] == &#39;name&#39;</code>
           </li>
         </div>
       
@@ -415,18 +415,18 @@
 
             
 
-            <code class="ruby">  def show</code>
+            <code class="ruby">      @plants = @plants.order(name: :asc)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
             
 
-            <code class="ruby">    @plant = Plant.find(params[:id])</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -459,7 +459,7 @@
 
             
 
-            <code class="ruby">  def edit</code>
+            <code class="ruby">  def new</code>
           </li>
         </div>
       
@@ -470,18 +470,18 @@
 
             
 
-            <code class="ruby">    @plant = Plant.find(params[:id])</code>
+            <code class="ruby">    @garden = Garden.find(params[:garden_id])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="missed" data-hits="0" data-linenumber="13">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    @plant = Plant.new</code>
           </li>
         </div>
       
@@ -492,29 +492,29 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def update</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby">    plant = Plant.find(params[:id])</code>
+            <code class="ruby">  def create</code>
           </li>
         </div>
       
@@ -525,7 +525,7 @@
 
             
 
-            <code class="ruby">    plant.update(plant_params)</code>
+            <code class="ruby">    @garden = Garden.find(params[:garden_id])</code>
           </li>
         </div>
       
@@ -536,7 +536,7 @@
 
             
 
-            <code class="ruby">    plant.save</code>
+            <code class="ruby">    @garden.plants.create!(plant_params)</code>
           </li>
         </div>
       
@@ -547,7 +547,7 @@
 
             
 
-            <code class="ruby">    redirect_to &quot;/plants/#{plant.id}&quot;</code>
+            <code class="ruby">    redirect_to &quot;/gardens/#{@garden.id}/plants&quot;</code>
           </li>
         </div>
       
@@ -591,7 +591,7 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -766,7 +766,7 @@
     <h3>app/models/garden.rb</h3>
     <h4>
       <span class="red">
-  66.67%
+  55.56%
 </span>
 
       lines covered
@@ -775,9 +775,9 @@
     
 
     <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>9</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
 
     
@@ -899,6 +899,61 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def sort_plants</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby">    require &#39;pry&#39;; binding.pry</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">    plants.order(:name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
