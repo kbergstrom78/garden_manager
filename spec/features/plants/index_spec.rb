@@ -54,11 +54,6 @@ RSpec.describe "/plants", type: :feature do
   
       # User Story 18 
 
-      # As a visitor
-      # When I visit the `child_table_name` index page or a parent `child_table_name` index page
-      # Next to every child, I see a link to edit that child's info
-      # When I click the link
-      # I should be taken to that `child_table_name` edit page where I can update its information just like in User Story 14
     it "displays link to edit plant info from plant index page" do
       visit '/plants'
       save_and_open_page

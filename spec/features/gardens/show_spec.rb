@@ -58,7 +58,7 @@ RSpec.describe '/gardens/:id', type: :feature do
     expect(page.current_path).to eq "/gardens/#{garden_1.id}/plants"
   end 
 
-  # User Story 12
+    # User Story 12
 
     it "displays a link to 'Update Garden" do
       visit "/gardens/#{garden_1.id}"
@@ -74,5 +74,23 @@ RSpec.describe '/gardens/:id', type: :feature do
 
       expect(current_path).to eq "/gardens/#{garden_1.id}"
       expect(page).to have_content("Alpine Garden")
+    end
+
+      # User Story 19, Parent Delete 
+
+      # As a visitor
+      # When I visit a parent show page
+      # Then I see a link to delete the parent
+      # When I click the link "Delete Parent"
+      # Then a 'DELETE' request is sent to '/parents/:id',
+      # the parent is deleted, and all child records are deleted
+      # and I am redirected to the parent index page where I no longer see this parent
+
+    it 'displays a link to delete a garden' do
+      visit "/gardens/#{garden_3.id}"
+      save_and_open_page
+      click_button("Delete #{garden_3.name}")
+
+      expect(current_path).to eq "/gardens"
     end
 end
