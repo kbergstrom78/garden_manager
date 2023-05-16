@@ -216,9 +216,9 @@ Then a 'DELETE' request is sent to '/parents/:id',
 the parent is deleted, and all child records are deleted
 and I am redirected to the parent index page where I no longer see this parent -->
 
-[ ] done
+[ X ] done
 
-User Story 20, Child Delete 
+<!-- User Story 20, Child Delete 
 
 As a visitor
 When I visit a child show page
@@ -226,7 +226,8 @@ Then I see a link to delete the child "Delete Child"
 When I click the link
 Then a 'DELETE' request is sent to '/child_table_name/:id',
 the child is deleted,
-and I am redirected to the child index page where I no longer see this child
+and I am redirected to the child index page where I no longer see this child -->
+
 ActiveRecord
 [ ] done
 

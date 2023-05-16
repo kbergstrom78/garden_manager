@@ -19,9 +19,19 @@ class Gardens::PlantsController < ApplicationController
     redirect_to "/gardens/#{@garden.id}/plants"
   end
 
+
+  def only_return_records_with_more_than_8_of_plant_quantity
+    @garden = Garden.find(params[:id])
+    number = params[:number].to_i
+    @plants = @garden.plants.where("#{Quantity} > ?", number)
+    redirect_to "/gardens#{@garden.id}/plants"
+  end
+
   private
 
   def plant_params
     params.permit(:name, :plant_type, :water, :light, :poisonous, :zone)
   end
+
+
 end
