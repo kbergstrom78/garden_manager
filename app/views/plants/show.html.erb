@@ -5,3 +5,6 @@
 <p> Light Needs: <%= @plant.light %></p>
 <p> Poisonous?: <%= @plant.poisonous %></p>
 <p> Growing Zone: <%= @plant.zone %></p>
+
+<p><%= link_to "Update Plant", "/plants/#{@plant.id}/edit" %></p>
+
