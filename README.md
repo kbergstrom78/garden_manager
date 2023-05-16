@@ -120,7 +120,7 @@ Then a `POST` request is sent to the '/parents' route,
 a new parent record is created,
 and I am redirected to the Parent Index page where I see the new Parent displayed.* -->
 
-[ ] done
+<!-- [ X ] done
 
 User Story 12, Parent Update 
 
@@ -133,7 +133,8 @@ When I fill out the form with updated information
 And I click the button to submit the form
 Then a `PATCH` request is sent to '/parents/:id',
 the parent's info is updated,
-and I am redirected to the Parent's Show page where I see the parent's updated info
+and I am redirected to the Parent's Show page where I see the parent's updated info -->
+
 [ ] done
 
 User Story 13, Parent Child Creation 

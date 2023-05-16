@@ -10,7 +10,6 @@ RSpec.describe 'gardens/:garden_id/plants', type: :feature do
       #User Story 5, Parent Children Index 
       it 'displays each garden and attributes associated with garden_1' do
       visit "/gardens/#{garden_1.id}/plants"
-      save_and_open_page
 
       expect(page).to have_content(plant_1.name)
       expect(page).to have_content(plant_1.plant_type)

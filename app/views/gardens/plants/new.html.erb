@@ -1,0 +1,26 @@
+<%= form_with url: "/gardens/#{@garden.id}/plants", method: :post, local: true do |form|  %>
+  <h3><%= form.label :name %></h3>
+  <p><%= form.text_field :name %></p>
+
+  <h3><%= form.label :plant_type %></h3>
+  <p><%= form.text_field :plant_type %></p>
+
+  <h3><%= form.label :water %></h3>
+  <p><%= form.text_field :water %></p>
+
+  <h3><%= form.label :light %></h3>
+  <p><%= form.text_field :light %></p>
+
+  <h3><%= form.label :poisonous %></h3>
+  <p>
+    <%= form.radio_button :poisonous, true %>
+    <%= form.label :true, "Yes" %>
+    <%= form.radio_button :poisonous, false %>
+    <%= form.label :false, "No" %>
+  </p>
+
+  <h3><%= form.label :zone %></h3>
+  <p><%= form.text_field :zone %></p>
+  <br>
+  <%= form.submit "Create Plant" %>
+<% end %>
