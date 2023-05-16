@@ -3,6 +3,13 @@
 <% @gardens.each do |garden| %>
 <h3> <p><%= garden.name %></p></h3>
 <p>Garden created: <%= garden.created_at %></p>
+<p><%= link_to "Update #{garden.name}", "/gardens/#{garden.id}/edit" %></p> 
+<br>
   <% end %>
+<br>
+<br>
+<br>
 
   <%= link_to "New Garden", "/gardens/new" %>
+<br>
+<br>

@@ -172,7 +172,7 @@ As a visitor
 When I visit the child index
 Then I only see records where the boolean column is `true` -->
 
-[ ] done
+<!-- [ X ] done
 
 User Story 16, Sort Parent's Children in Alphabetical Order by name 
 
@@ -180,7 +180,7 @@ As a visitor
 When I visit the Parent's children Index Page
 Then I see a link to sort children in alphabetical order
 When I click on the link
-I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
+I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order -->
 Usability
 [ ] done
 
@@ -191,6 +191,7 @@ When I visit the parent index page
 Next to every parent, I see a link to edit that parent's info
 When I click the link
 I should be taken to that parent's edit page where I can update its information just like in User Story 12
+
 [ ] done
 
 User Story 18, Child Update From Childs Index Page 
