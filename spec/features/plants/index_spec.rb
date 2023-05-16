@@ -40,17 +40,31 @@ RSpec.describe "/plants", type: :feature do
   
       # User Story 15, 
   
-      it "only displays records where poisonous = true" do
-        visit '/plants'
+    it "only displays records where poisonous = true" do
+      visit '/plants'
 
-        expect(page).to_not have_content(plant_1.name)
-        expect(page).to have_content(plant_3.name)
-        expect(page).to have_content(plant_3.plant_type)
-        expect(page).to have_content(plant_3.water)
-        expect(page).to have_content(plant_3.light)
-        expect(page).to have_content(plant_3.poisonous)
-        expect(page).to have_content(plant_3.zone)
-      end
+      expect(page).to_not have_content(plant_1.name)
+      expect(page).to have_content(plant_3.name)
+      expect(page).to have_content(plant_3.plant_type)
+      expect(page).to have_content(plant_3.water)
+      expect(page).to have_content(plant_3.light)
+      expect(page).to have_content(plant_3.poisonous)
+      expect(page).to have_content(plant_3.zone)
+    end
   
+      # User Story 18 
 
+      # As a visitor
+      # When I visit the `child_table_name` index page or a parent `child_table_name` index page
+      # Next to every child, I see a link to edit that child's info
+      # When I click the link
+      # I should be taken to that `child_table_name` edit page where I can update its information just like in User Story 14
+    it "displays link to edit plant info from plant index page" do
+      visit '/plants'
+      save_and_open_page
+      click_link "Update #{plant_3.name}"
+
+      expect(current_path).to eq "/plants/#{plant_3.id}/edit"
+    end
+  end
 end
