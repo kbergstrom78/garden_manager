@@ -8,4 +8,9 @@ class Garden < ApplicationRecord
   def count_of_plants
     plants.size
   end
+
+  def sort_plants
+    require 'pry'; binding.pry
+    plants.order(:name)
+  end
 end

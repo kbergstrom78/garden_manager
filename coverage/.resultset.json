@@ -266,6 +266,11 @@
           1,
           0,
           null,
+          null,
+          1,
+          0,
+          0,
+          null,
           null
         ]
       },
@@ -283,24 +288,24 @@
           null
         ]
       },
-      "/Users/kimbergstrom/Turing/2mod/projects/garden_manager/garden_manager/app/controllers/plants_controller.rb": {
+      "/Users/kimbergstrom/Turing/2mod/projects/garden_manager/garden_manager/app/controllers/gardens/plants_controller.rb": {
         "lines": [
           1,
-          null,
           1,
+          3,
+          3,
+          null,
+          3,
           1,
           null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
           null,
           null,
           1,
           0,
+          0,
+          null,
+          null,
+          1,
           0,
           0,
           0,
@@ -321,6 +326,6 @@
         ]
       }
     },
-    "timestamp": 1684246429
+    "timestamp": 1684248528
   }
 }

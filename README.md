@@ -163,14 +163,15 @@ When I click the button to submit the form "Update Child"
 Then a `PATCH` request is sent to '/child_table_name/:id',
 the child's data is updated,
 and I am redirected to the Child Show page where I see the Child's updated information -->
-ActiveRecord
-[ ] done
+<!-- ActiveRecord
+[ X ] done
 
 User Story 15, Child Index only shows `true` Records 
 
 As a visitor
 When I visit the child index
-Then I only see records where the boolean column is `true`
+Then I only see records where the boolean column is `true` -->
+
 [ ] done
 
 User Story 16, Sort Parent's Children in Alphabetical Order by name 

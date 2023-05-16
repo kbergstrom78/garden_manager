@@ -1,4 +1,6 @@
 <h2> Plants Found in <%= "#{@garden.name}" %></h2>
+<%= link_to "Sort Plants by Name", sort: 'name' %>
+%>
 <br>
 <% @plants.each do |plant| %>
   <h4><p> Name: <%= plant.name %></p></h4>

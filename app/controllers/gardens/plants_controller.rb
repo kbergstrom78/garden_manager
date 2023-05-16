@@ -2,6 +2,10 @@ class Gardens::PlantsController < ApplicationController
   def index
     @garden = Garden.find(params[:garden_id])
     @plants = @garden.plants
+
+    if params[:sort] == 'name'
+      @plants = @plants.order(name: :asc)
+    end
   end
 
   def new
