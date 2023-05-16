@@ -22,10 +22,8 @@ Rails.application.routes.draw do
   get '/gardens/:garden_id/plants', to: 'gardens/plants#index'
   get '/gardens/:garden_id/plants/new', to: 'gardens/plants#new'
   post '/gardens/:garden_id/plants', to: 'gardens/plants#create'
+  post '/gardens/:garden_id/plants/only_return_records_with_more_than_8_of_plant_quantity', to: 'gardens/plants#index' 
 
-
-  
- 
 end
 
 

@@ -19,7 +19,7 @@ RSpec.describe "application layout view", type: :feature do
       expect(current_path).to eq("/plants")
 
       visit "/plants/#{plant_1.id}"
-      save_and_open_page
+      # save_and_open_page
       expect(page).to have_content("All Plants")
 
       click_link("All Plants")
@@ -29,7 +29,7 @@ RSpec.describe "application layout view", type: :feature do
     it "can visit any page on the site and see the garden index" do
       visit "/gardens/#{garden_1.id}/plants"
       expect(page).to have_link("All Gardens")
-      save_and_open_page
+      # save_and_open_page
       click_link("All Gardens")
       expect(current_path).to eq("/gardens")
     end

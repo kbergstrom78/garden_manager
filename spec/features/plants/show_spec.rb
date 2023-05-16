@@ -60,7 +60,7 @@ RSpec.describe "/plants/:id", type: :feature do
       # User Story 20, Child Delete 
     it 'displays a link to delete a plant record' do
       visit "/plants/#{plant_3.id}"
-      save_and_open_page
+      # save_and_open_page
       click_button "Delete #{plant_3.name}"
       
       expect(current_path).to eq("/plants")

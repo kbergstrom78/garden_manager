@@ -1,7 +1,6 @@
 <h2> Plants Found in <%= "#{@garden.name}" %></h2>
 <%= link_to "Sort Plants by Name", sort: 'name' %>
-%>
-<br>
+
 <% @plants.each do |plant| %>
   <h4><p> Name: <%= plant.name %></p></h4>
   <p> Type: <%= plant.plant_type %></p>
@@ -9,6 +8,14 @@
   <p> Light Needs: <%= plant.light %></p>
   <p> Poisonous?: <%= plant.poisonous %></p>
   <p> Growing Zone: <%= plant.zone %></p>
+  
+  <%= form_tag "/gardens/#{params[:garden_id]}/plants", method: :get do %>
+  <%= label_tag "quantity_#{plant.id}", "Quantity:" %>
+  <%= number_field_tag "quantity_#{plant.id}", nil, id: "quantity_#{plant.id}" %>
+  <%= submit_tag "Only return records with more than 8 of plant quantity" %>
+<% end %>
+
+
   <%= link_to "Update #{plant.name}", "/plants/#{plant.id}/edit" %>
 <br>
 <br>

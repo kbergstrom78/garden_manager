@@ -8,7 +8,7 @@ RSpec.describe "/gardens", type: :feature do
     let!(:garden_2) { Garden.create!(name:"2nd Grade Garden", location: "Mountain Elementary", plantable: true, plot: 3)  }
     let!(:garden_3) { Garden.create!(name:"Los Alamos Community Garden", location: "North Mesa", plantable: false, plot: 12)  }
 
-    it "displays all the names of all the gardes" do
+    it "displays all the names of all the gardens" do
       visit "/gardens"
       # save_and_open_page
 
@@ -31,7 +31,7 @@ RSpec.describe "/gardens", type: :feature do
       
     it  'can edit each gardens info' do
       visit "/gardens"
-      save_and_open_page
+      # save_and_open_page
       click_link "Update #{garden_2.name}"
     
       expect(current_path).to eq "/gardens/#{garden_2.id}/edit"
