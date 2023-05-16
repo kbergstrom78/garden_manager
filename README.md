@@ -181,7 +181,7 @@ When I visit the Parent's children Index Page
 Then I see a link to sort children in alphabetical order
 When I click on the link
 I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order -->
-Usability
+<!-- Usability -->
 <!-- [ X ] done
 
 User Story 17, Parent Update From Parent Index Page 
@@ -216,7 +216,7 @@ Then a 'DELETE' request is sent to '/parents/:id',
 the parent is deleted, and all child records are deleted
 and I am redirected to the parent index page where I no longer see this parent -->
 
-[ X ] done
+<!-- [ X ] done -->
 
 <!-- User Story 20, Child Delete 
 

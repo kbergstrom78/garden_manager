@@ -10,7 +10,7 @@ RSpec.describe 'gardens/:garden_id/plants/new', type: :feature do
     
     it 'displays a link to add a new plant to the garden #Create Child' do
       visit "/gardens/#{garden_1.id}/plants"
-      save_and_open_page
+      # save_and_open_page
       
       click_link "Create Plant"
       expect(current_path).to eq "/gardens/#{garden_1.id}/plants/new"
@@ -22,7 +22,7 @@ RSpec.describe 'gardens/:garden_id/plants/new', type: :feature do
       fill_in "zone", with: 6
       click_button 'Create Plant'
           
-      save_and_open_page
+      # save_and_open_page
 
       expect(current_path).to eq "/gardens/#{garden_1.id}/plants"
       expect(page).to have_content("basil")

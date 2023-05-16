@@ -51,7 +51,7 @@ RSpec.describe 'gardens/:garden_id/plants', type: :feature do
 
       it "displays link to edit plant info from plant index page" do
         visit "/gardens/#{garden_1.id}/plants" 
-        save_and_open_page
+        # save_and_open_page
 
         click_link "Update #{plant_3.name}"
   
@@ -84,7 +84,7 @@ RSpec.describe 'gardens/:garden_id/plants', type: :feature do
 
       it 'filters plants by quantity' do
         visit "/gardens/#{garden_1.id}/plants" 
-        save_and_open_page
+        # save_and_open_page
         fill_in "quantity_#{plant_1.id}", with: 16
         fill_in "quantity_#{plant_2.id}", with: 2
         fill_in "quantity_#{plant_3.id}", with: 11
