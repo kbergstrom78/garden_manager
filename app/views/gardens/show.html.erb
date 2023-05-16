@@ -10,3 +10,4 @@
 <p><%= link_to "Plants in this Garden", "/gardens/#{@garden.id}/plants" %></p>
 <br>
 <p><%= link_to "Update Garden Info", "/gardens/#{@garden.id}/edit" %></p>
+<%= button_to "Delete #{@garden.name}", "/gardens/#{@garden.id}", method: :delete %>

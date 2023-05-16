@@ -35,7 +35,7 @@ RSpec.describe 'gardens/:garden_id/plants', type: :feature do
       # I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
       it "displays plants on the garden/plants index page in alpha order" do
         visit "/gardens/#{garden_1.id}/plants"
-        save_and_open_page
+        # save_and_open_page
         
         expect(page).to have_link("Sort Plants by Name")
         expect(plant_1.name).to appear_before(plant_2.name)
@@ -47,7 +47,15 @@ RSpec.describe 'gardens/:garden_id/plants', type: :feature do
         expect(plant_1.name).to appear_before(plant_4.name)
         expect(plant_4.name).to appear_before(plant_2.name)
       end
+      # User Story 18
+
+      it "displays link to edit plant info from plant index page" do
+        visit "/gardens/#{garden_1.id}/plants" 
+        save_and_open_page
+
+        click_link "Update #{plant_3.name}"
   
-  
+        expect(current_path).to eq "/plants/#{plant_3.id}/edit"
+      end
   end
 end
