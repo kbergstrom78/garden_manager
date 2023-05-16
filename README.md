@@ -182,7 +182,7 @@ Then I see a link to sort children in alphabetical order
 When I click on the link
 I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order -->
 Usability
-[ ] done
+<!-- [ X ] done
 
 User Story 17, Parent Update From Parent Index Page 
 
@@ -190,7 +190,7 @@ As a visitor
 When I visit the parent index page
 Next to every parent, I see a link to edit that parent's info
 When I click the link
-I should be taken to that parent's edit page where I can update its information just like in User Story 12
+I should be taken to that parent's edit page where I can update its information just like in User Story 12 -->
 
 [ ] done
 
@@ -201,6 +201,7 @@ When I visit the `child_table_name` index page or a parent `child_table_name` in
 Next to every child, I see a link to edit that child's info
 When I click the link
 I should be taken to that `child_table_name` edit page where I can update its information just like in User Story 14
+
 Iteration 3
 CRUD
 [ ] done
