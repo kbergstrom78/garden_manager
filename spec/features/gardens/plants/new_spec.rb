@@ -1,12 +1,6 @@
 require 'rails_helper'
       # User Story 13
 
-    # Then I see a link to add a new adoptable child for that parent "Create Child"
-    # When I fill in the form with the child's attributes:
-    # And I click the button "Create Child"
-    # Then a `POST` request is sent to '/parents/:parent_id/child_table_name',
-    # a new child object/row is created for that parent,
-    # and I am redirected to the Parent Childs Index page where I can see the new child listed
 RSpec.describe 'gardens/:garden_id/plants/new', type: :feature do
   describe 'as a visitor when i visit the gardens plants index page' do
     let!(:garden_1) { Garden.create!(name:"Kew Garden", location: "London", plantable: true, plot: 65)  }
